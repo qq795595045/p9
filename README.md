@@ -13,20 +13,21 @@
 
 ---
 
-## 2. 核心 API 知识点与 ROS 2 讲义章节对应
+## 2. 核心 API 知识点与 ROS 2 在线讲义章节对应
 
-本项目所使用的核心 ROS 2 API 均与讲义教程 **[qq795595045/ros2](https://github.com/qq795595045/ros2)** 保持严格对应，点击下方链接可直接跳转到对应讲义章节：
+本项目所使用的核心 ROS 2 API 均与你的在线讲义教程 **[ROS2 理论与实践](https://qq795595045.github.io/ros2/)** 保持严格对应。点击下方链接可**直接在浏览器中打开对应章节的在线电子书**：
 
-| API / 宏 / 语法 | 功能说明 | 对应讲义章节 | 讲义在线跳转链接 |
+| API / 宏 / 语法 | 功能说明 | 对应讲义章节 | 在线讲义直达页面 |
 | :--- | :--- | :--- | :--- |
-| `rclcpp::init()`<br>`rclcpp::shutdown()` | ROS 2 上下文生命周期初始化与资源安全释放 | 第2章 资料：API文档 ➔ 1.流程相关API | [📖 查看讲义：1.流程相关API](https://github.com/qq795595045/ros2/blob/main/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/zi-liao-ff1a-api-wen-dang/1liu-cheng-xiang-guan-api.md) |
-| `rclcpp::Node` | 节点基类，管理节点名称、生命周期与通信实体 | 第2章 资料：API文档 ➔ 2.节点相关API | [📖 查看讲义：2.节点相关API](https://github.com/qq795595045/ros2/blob/main/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/zi-liao-ff1a-api-wen-dang/2jie-dian-xiang-guan-api.md) |
-| `Node::create_publisher()` | 创建话题发布者（Publisher）对象 | 第2章 2.2 话题通信 ➔ 2.2.2 话题通信之原生消息(C++) | [📖 查看讲义：2.2.2 话题通信(C++)](https://github.com/qq795595045/ros2/blob/main/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/22-hua-ti-tong-xin/222-hua-ti-tong-xin-c-shi-73b028-yuan-sheng-xiao-606f29.md) |
-| `Node::create_subscription()` | 创建话题订阅者（Subscription）并绑定回调函数 | 第2章 2.2 话题通信 ➔ 2.2.2 话题通信之原生消息(C++) | [📖 查看讲义：2.2.2 话题通信(C++)](https://github.com/qq795595045/ros2/blob/main/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/22-hua-ti-tong-xin/222-hua-ti-tong-xin-c-shi-73b028-yuan-sheng-xiao-606f29.md) |
-| `Node::create_wall_timer()` | 创建基于系统时间的周期定时器（Wall Timer） | 第2章 资料：API文档 ➔ 2.节点相关API (定时器) | [📖 查看讲义：定时器 API](https://github.com/qq795595045/ros2/blob/main/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/zi-liao-ff1a-api-wen-dang/2jie-dian-xiang-guan-api.md) |
-| `rclcpp::spin()` | 阻塞主线程并运行单线程执行器处理回调队列 | 第2章 资料：API文档 ➔ 1.流程相关API (1.3 回旋函数) | [📖 查看讲义：1.3 回旋函数](https://github.com/qq795595045/ros2/blob/main/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/zi-liao-ff1a-api-wen-dang/1liu-cheng-xiang-guan-api.md) |
-| `RCLCPP_INFO()` | 节点格式化日志输出宏 | 第1章 1.3 快速体验 ➔ 1.3.2 HelloWorld(C++)实现 | [📖 查看讲义：1.3.2 日志输出](https://github.com/qq795595045/ros2/blob/main/_book/chapter1/13-ros2kuai-su-ti-yan/131-helloworldcshi-73b029.md) |
-| `rosidl_generate_interfaces()` | CMake 宏：编译生成自定义 msg 接口代码 | 第2章 2.2 话题通信 ➔ 2.2.4 话题通信自定义接口消息 | [📖 查看讲义：2.2.4 自定义接口消息](https://github.com/qq795595045/ros2/blob/main/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/22-hua-ti-tong-xin/222-hua-ti-tong-xin-jie-kou-xiao-xi.md) |
+| `rosidl_generate_interfaces()` | CMake 宏：编译生成自定义 msg 接口代码 | 2.2 话题通信 ➔ 2.2.4 话题通信自定义接口消息 | [📖 2.2.4 话题通信自定义接口消息](https://qq795595045.github.io/ros2/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/22-hua-ti-tong-xin/222-hua-ti-tong-xin-jie-kou-xiao-xi.html) |
+| `Node::create_publisher()` | 创建话题发布者（Publisher）对象 | 2.2 话题通信 ➔ 2.2.2 话题通信之原生消息(C++) | [📖 2.2.2 话题通信之原生消息(C++)](https://qq795595045.github.io/ros2/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/22-hua-ti-tong-xin/222-hua-ti-tong-xin-c-shi-73b028-yuan-sheng-xiao-606f29.html) |
+| `Node::create_subscription()` | 创建话题订阅者（Subscription）并绑定回调函数 | 2.2 话题通信 ➔ 2.2.2 话题通信之原生消息(C++) | [📖 2.2.2 话题通信之原生消息(C++)](https://qq795595045.github.io/ros2/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/22-hua-ti-tong-xin/222-hua-ti-tong-xin-c-shi-73b028-yuan-sheng-xiao-606f29.html) |
+| `Node::create_wall_timer()` | 创建基于系统时间的周期定时器（Wall Timer） | 2.2 话题通信 ➔ 2.2.2 话题通信之原生消息(C++) | [📖 2.2.2 话题通信之原生消息(C++)](https://qq795595045.github.io/ros2/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/22-hua-ti-tong-xin/222-hua-ti-tong-xin-c-shi-73b028-yuan-sheng-xiao-606f29.html) |
+| `rclcpp::init()`<br>`rclcpp::shutdown()` | ROS 2 上下文生命周期初始化与资源安全释放 | 2.2 话题通信 ➔ 2.2.2 话题通信之原生消息(C++) | [📖 2.2.2 话题通信之原生消息(C++)](https://qq795595045.github.io/ros2/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/22-hua-ti-tong-xin/222-hua-ti-tong-xin-c-shi-73b028-yuan-sheng-xiao-606f29.html) |
+| `rclcpp::spin()` | 阻塞主线程并运行单线程执行器处理回调队列 | 2.2 话题通信 ➔ 2.2.2 话题通信之原生消息(C++) | [📖 2.2.2 话题通信之原生消息(C++)](https://qq795595045.github.io/ros2/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/22-hua-ti-tong-xin/222-hua-ti-tong-xin-c-shi-73b028-yuan-sheng-xiao-606f29.html) |
+| `rclcpp::Node` | 节点基类，管理节点名称、生命周期与通信实体 | 2.2 话题通信 ➔ 2.2.2 话题通信之原生消息(C++) | [📖 2.2.2 话题通信之原生消息(C++)](https://qq795595045.github.io/ros2/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/22-hua-ti-tong-xin/222-hua-ti-tong-xin-c-shi-73b028-yuan-sheng-xiao-606f29.html) |
+| 自定义 Twist 消息 C++ 调用 | 在 C++ 节点中发布/接收自定义接口消息 | 2.2 话题通信 ➔ 2.2.5 话题通信之自定义消息(C++) | [📖 2.2.5 话题通信自定义消息(C++)](https://qq795595045.github.io/ros2/_book/di-2-zhang-ros2-tong-xin-ji-zhi-he-xin/22-hua-ti-tong-xin/223-hua-ti-tong-xin-c-shi-xian.html) |
+| `RCLCPP_INFO()` | 节点格式化日志输出宏 | 1.3 快速体验 ➔ 1.3.1 HelloWorld(C++)实现 | [📖 1.3.1 HelloWorld(C++)实现](https://qq795595045.github.io/ros2/_book/chapter1/13-ros2kuai-su-ti-yan/131-helloworldcshi-73b029.html) |
 
 ---
 
