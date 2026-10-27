@@ -2,6 +2,9 @@
 
 本项目基于 ROS 2 Humble 构建，实现了包含自定义接口、周期发布、中继安全限幅及接收订阅的完整数据通信流水线（Pipeline）。
 
+ # 项目问题：
+ pipe在处理后向sub发送到数据里会出现0.0000的数据，与pipe接收到的数据不符合
+
 ---
 
 ## 1. 项目架构与节点职责
@@ -31,22 +34,41 @@
 
 ---
 
-## 3. 构建与运行指南
+## 3. 仓库克隆与快速上手 (Quick Start)
 
-### 编译工作空间
+在 Ubuntu (推荐 ROS 2 Humble) 环境下打开终端，依次执行以下命令即可一键克隆并完成编译：
+
 ```bash
+# 1. 克隆本仓库
+git clone https://github.com/qq795595045/p9.git
+
+# 2. 进入 p9 工作空间
+cd p9
+
+# 3. 激活 ROS 2 环境并一键构建
+source /opt/ros/humble/setup.bash
 colcon build
+
+# 4. 生效本工作空间的环境变量
 source install/setup.bash
 ```
 
-### 依次启动节点（需分别打开 3 个终端）
+---
+
+## 4. 节点运行指南
+
+分别打开 3 个独立终端，依次启动管道中继、订阅以及发布节点，即可观察完整的数据限幅与流转：
+
 ```bash
-# 终端 1：启动管道限幅节点
+# 终端 1：启动管道限幅中继节点
+source install/setup.bash
 ros2 run pipe pipe
 
-# 终端 2：启动订阅接收节点
+# 终端 2：启动终端订阅节点（打印接收到的安全限幅指令）
+source install/setup.bash
 ros2 run sub sub
 
-# 终端 3：启动发布节点
+# 终端 3：启动发布节点（开始周期生成并推送随机速度数据）
+source install/setup.bash
 ros2 run pub pub
 ```
